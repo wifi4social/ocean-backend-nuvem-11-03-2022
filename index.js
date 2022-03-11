@@ -1,19 +1,19 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
-const url = "mongodb://localhost:27017";
-const dbName = "ocean_bancodados_10_03_2022";
+const url = "mongodb+srv://marsoft:mhda@marsoft.6rzdy.mongodb.net";
+const dbName = "MarSoft";
 
 async function main() {
   // Conexão com o bando de dados
 
   console.log("Conectando ao banco de dados...");
 
-  //const client = await MongoClient.connect(url);
+  const client = await MongoClient.connect(url);
 
-  //const db = client.db(dbName);
+  const db = client.db(dbName);
 
-  //const collection = db.collection("herois");
+  const collection = db.collection("herois");
 
   console.log("Conexão com o banco de dados realizada com sucesso.");
 
